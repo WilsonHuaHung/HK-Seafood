@@ -202,6 +202,31 @@ mark {
   display: block;
 }
 	
+/* Style tab links */
+.tablink {
+  background-color: red;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #F75D59;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 55px 0px;
+  height: 100%;
+}
+	
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
@@ -307,17 +332,10 @@ mark {
 </div>
 
 <div class="navbar">
-	<a href="#home">HOME</a>
-	<div class="dropdown">
-		<button class="dropbtn"> MENU
-			<i class="fa fa-caret-down"></i>
-		</button>
-		<div class="dropdown-content">
-			<a href="#">Link 1</a>
-			<a href="#">Link 2</a>
-			<a href="#">Link 3</a>
-		</div>
-	</div>
+	<button class="tablink" onclick="openPage('Home', this, '#F75D59')" id="defaultOpen">HOME</button>
+	<button class="tablink" onclick="openPage('Menu', this, '#F75D59')">MENU</button>
+	<button class="tablink" onclick="openPage('Specials', this, '#F75D59')">SPECIALS</button>
+	<button class="tablink" onclick="openPage('Contact', this, '#F75D59')">CONTACT</button>
 </div>
 
 
